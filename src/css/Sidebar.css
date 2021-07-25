@@ -1,0 +1,22 @@
+.sidebar {
+  background: black;
+  /* height: 100%; */
+  width: 240px;
+  padding: 20px 20px 20px 0;
+}
+.sidebar__buttons {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar__compose {
+  padding: 10px 30px;
+  display: flex;
+  background: #fff;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}

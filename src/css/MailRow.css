@@ -1,0 +1,18 @@
+.mail {
+  height: 50px;
+  border: 1px solid #444;
+  display: flex;
+  background: #000;
+  color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.mail:hover {
+  box-shadow: 0px 0px 5px -1px #fff;
+}
+.mail > h3 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

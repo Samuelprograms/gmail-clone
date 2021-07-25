@@ -1,0 +1,19 @@
+.maillist {
+  height: 88vh;
+  overflow-y: scroll;
+}
+.mail__settings {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000;
+}
+.mail__settings__left,
+.mail__settings__right {
+  display: flex;
+  align-items: center;
+}
+.mail__body {
+  margin: 10px;
+  border: 1px solid black;
+}

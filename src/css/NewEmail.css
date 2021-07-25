@@ -1,0 +1,44 @@
+.email {
+  position: fixed;
+  bottom: 0;
+  right: 70px;
+  width: 30%;
+  background: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+  box-shadow: 0px 0px 10px 1px #ccc;
+}
+.email__header {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background: #333;
+  color: #fff;
+  padding-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.email__body {
+  display: flex;
+  flex-direction: column;
+}
+.email__body > input, .email__body > textarea {
+  padding: 10px;
+  outline: none;
+  border: 1px solid #eee;
+}
+.email__body > button {
+  color: #fff;
+  padding: 12px;
+  width: 100px;
+  border-radius: 2px;
+  margin: 15px;
+  background: rgb(82, 82, 255);
+  border: none;
+  cursor: pointer;
+}
+.email__body__message{
+    height: 400px;
+    border: none !important;
+}

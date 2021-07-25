@@ -1,0 +1,22 @@
+.sidebar__button {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #fff;
+  padding: 5px;
+  padding-left: 20px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.sidebar__button:hover {
+  background: #666;
+}
+.sidebar__button--active {
+  background: #888;
+}
+.sidebar__button span {
+  margin-left: 20px;
+}
