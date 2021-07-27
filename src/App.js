@@ -8,12 +8,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import NewMail from "./components/NewMail";
 import { useSelector, useDispatch } from "react-redux";
-import { selectSendNewMail } from "./features/mailSlice";
+import { selectSendNewMail, selectShowSidebar } from "./features/mailSlice";
 import { selectUser, login } from "./features/userSlice";
 import { auth } from "./firebase";
 const App = () => {
   const sendNewMailIsOpen = useSelector(selectSendNewMail);
   const user = useSelector(selectUser);
+  const showSidebar = useSelector(selectShowSidebar);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,7 +37,9 @@ const App = () => {
           <Header />
           <div className="app__body">
             <Sidebar />
-            <div className="app__body__main">
+            <div
+              style={{ width: `${!showSidebar ? "calc(100%-240px)" : "100%"}` }}
+            >
               <Switch>
                 <Route path="/mail">
                   <Mail />

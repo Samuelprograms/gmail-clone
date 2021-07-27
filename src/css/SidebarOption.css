@@ -10,12 +10,13 @@
   cursor: pointer;
   outline: none;
   border: none;
+  font-weight: bold;
 }
 .sidebar__button:hover {
-  background: #666;
+  background: #444;
 }
 .sidebar__button--active {
-  background: #888;
+  background: #555;
 }
 .sidebar__button span {
   margin-left: 20px;

@@ -1,15 +1,26 @@
 import React from "react";
 import "./../css/SidebarOption.css";
 
-const SidebarOption = ({ Icon, name, pressed, setPressed }) => {
+const SidebarOption = ({
+  Icon,
+  name,
+  pressed,
+  setPressed,
+  toggle,
+  setToggle,
+}) => {
   return (
     <button
       name={name}
       className={`sidebar__button ${
         pressed === name && "sidebar__button--active"
       }`}
-      onClick={(e) => {
-        setPressed(name);
+      onClick={() => {
+        if (setPressed) {
+          setPressed(name);
+        } else {
+          setToggle(!toggle);
+        }
       }}
     >
       <Icon />

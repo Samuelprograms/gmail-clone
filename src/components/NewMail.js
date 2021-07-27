@@ -30,7 +30,10 @@ const NewMail = () => {
   };
   return (
     <div className="email">
-      <div className="email__header">
+      <div
+        className="email__header"
+        onClick={() => dispatch(minimizedWindow())}
+      >
         New Message
         <div className="header__icons">
           <IconButton onClick={() => dispatch(minimizedWindow())}>

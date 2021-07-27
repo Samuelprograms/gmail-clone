@@ -1,19 +1,39 @@
 .maillist {
-  height: 88vh;
+  height: calc(100vh - 100px);
+  width: 100%;
   overflow-y: scroll;
 }
 .mail__settings {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   background: #000;
-}
-.mail__settings__left,
-.mail__settings__right {
-  display: flex;
-  align-items: center;
+  height: 40px;
+  width: 100%;
 }
 .mail__body {
+  background: #fff;
+  height: calc(100vh - 120px);
   margin: 10px;
   border: 1px solid black;
+  padding: 50px;
+}
+.mail__head{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+
+}
+.mail__head__left{
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+}
+.mail__head__left>img{
+  width: 40px;
+  border-radius: 50%;
+  margin:10px
 }

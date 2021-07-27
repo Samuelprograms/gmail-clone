@@ -1,11 +1,10 @@
 .app {
   height: 100vh;
-  overflow-y: hidden;
+  width: 100%;
+  background: #000;
 }
 .app__body {
   display: flex;
-  height: 100%;
-}
-.app__body__main {
   width: 100%;
+  height: calc(100vh - 60px);
 }

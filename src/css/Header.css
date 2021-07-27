@@ -2,8 +2,8 @@
   background: #000;
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #444;
-  padding: 8px;
+  border-bottom: 1px solid #333;
+  height: 60px;
 }
 .MuiSvgIcon-root {
   color: #ccc;
@@ -11,14 +11,15 @@
 .header__left {
   display: flex;
   align-items: center;
-  width: 50%;
 }
 .header__left__input {
   display: flex;
   background: #444;
-  border-radius: 10px;
+  border-radius: 8px;
   margin-left: 10%;
-  width: 100%;
+  width: 800px;
+  padding: 0 10px;
+  transition: all 0.3s ease-in;
 }
 .header__left__input input {
   background: transparent;
@@ -26,12 +27,16 @@
   outline: none;
   width: 100%;
   color: #fff;
+  font-size: 16px;
 }
 .header__left__input:hover {
   background: #fff;
 }
 .header__left__input:hover > input {
   color: #000;
+}
+.input__icons {
+  display: flex;
 }
 .header__right {
   display: flex;
@@ -50,4 +55,44 @@
 }
 .header__right__image > img {
   border-radius: 50%;
+}
+@media screen and (max-width: 1320px) {
+  .header__left__input {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header__left__input {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 887px) {
+  .header__left__input > input {
+    display: none;
+  }
+  .header__left__input {
+    width: 100%;
+    background: transparent;
+  }
+}
+@media screen and (max-width: 645px) {
+  .header__left__input > input {
+    display: none;
+  }
+  .header__right {
+    width: 120px;
+  }
+  .header__right__image {
+    width: 100%;
+  }
+  .header__right__icons {
+    display: none;
+  }
+  .header__left__input {
+    width: 100%;
+    background: transparent;
+  }
+  .input__icons {
+    display: none;
+  }
 }

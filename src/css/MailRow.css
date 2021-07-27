@@ -1,18 +1,33 @@
 .mail {
+  width: 100%;
   height: 50px;
   border: 1px solid #444;
-  display: flex;
-  background: #000;
+  background: transparent;
   color: #fff;
-  align-items: center;
-  justify-content: space-between;
   cursor: pointer;
+  padding: 0px 10px;
+  display: grid;
+  grid-template-columns: 84px 1fr 200px;
+  align-items: center;
+}
+.mail > * {
+  font-size: 14px;
 }
 .mail:hover {
-  box-shadow: 0px 0px 5px -1px #fff;
+  background: rgba(0, 0, 0, 0.5);
 }
-.mail > h3 {
+.mail > h3,
+span,
+p,
+strong {
+  max-width: 1100px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.mail__main {
+  display: grid;
+  align-items: center;
+  height: 100%;
+  grid-template-columns: 300px 1fr;
 }

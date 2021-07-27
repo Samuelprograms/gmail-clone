@@ -42,43 +42,49 @@ const MailRow = ({ sender, subject, message, date, id }) => {
   };
   return (
     <div
-      style={{ zIndex: "10" }}
       className="mail"
       onMouseOver={() => setShowIcons(true)}
       onMouseLeave={() => setShowIcons(false)}
-      onClick={() => handleOpenMail()}
     >
-      <Checkbox
-        checked={checkedAllMails ? checkedAllMails : checked}
-        onChange={() => setChecked(checkedAllMails ? checked : !checked)}
-      />
-      <Checkbox icon={<StarBorderIcon />} checkedIcon={<StarIcon />} />
-      <h3>{sender}</h3>
-      <h3>
-        {subject}
-        <span>{message}</span>
-      </h3>
-      {!showIcons && (
-        <strong style={{ justifySelf: "end", marginRight: "10px" }}>
-          {date.split(",")[1].split(" ").slice(1, 3).join(" ")}
-        </strong>
-      )}
-      {showIcons && (
-        <div>
-          <IconButton>
-            <ArchiveIcon />
-          </IconButton>
-          <IconButton onClick={() => handleDeleteMail(id)}>
-            <DeleteIcon />
-          </IconButton>
-          <IconButton>
-            <DraftsIcon />
-          </IconButton>
-          <IconButton>
-            <WatchLaterIcon />
-          </IconButton>
-        </div>
-      )}
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <Checkbox
+          checked={checkedAllMails ? checkedAllMails : checked}
+          onChange={() => setChecked(checkedAllMails ? checked : !checked)}
+        />
+        <Checkbox icon={<StarBorderIcon />} checkedIcon={<StarIcon />} />
+      </div>
+      <div
+      className="mail__main"
+        onClick={() => handleOpenMail()}
+      >
+        <strong>{sender}</strong>
+        <p onClick={() => handleOpenMail()}>
+          <strong>{subject}</strong>
+          {" - "}
+          {message}
+        </p>
+      </div>
+
+      <div style={{ textAlign: "end" }}>
+        {showIcons ? (
+          <>
+            <IconButton>
+              <ArchiveIcon />
+            </IconButton>
+            <IconButton onClick={() => handleDeleteMail(id)}>
+              <DeleteIcon />
+            </IconButton>
+            <IconButton>
+              <DraftsIcon />
+            </IconButton>
+            <IconButton>
+              <WatchLaterIcon />
+            </IconButton>
+          </>
+        ) : (
+          <strong>{date.substr(5, 6)}</strong>
+        )}
+      </div>
     </div>
   );
 };
